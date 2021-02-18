@@ -1,0 +1,29 @@
+Program Valor_promedio;
+Uses
+  crt;
+Var
+  x:real;
+  x1,x2,x3,x4,x5,x6,x7,x8,x9,x10:integer;
+  infile,outfile:text;
+Begin
+  clrscr;
+  assign(infile,'promedio.in');
+  reset(infile);
+  readln(infile,x1);
+  readln(infile,x2);
+  readln(infile,x3);
+  readln(infile,x4);
+  readln(infile,x5);
+  readln(infile,x6);
+  readln(infile,x7);
+  readln(infile,x8);
+  readln(infile,x9);
+  readln(infile,x10);
+  x:=(x1+x2+x3+x4+x5+x6+x7+x8+x9+x10)/10;
+  close(infile);
+  assign(outfile,'promedio.out');
+  rewrite(outfile);
+  writeln(outfile,x1:10,x2:10,x3:10,x4:10,x5:10,x6:10,x7:10,x8:10,x9:10,x10:10);
+  writeln(outfile,'El promedio es: ',x:10:2);
+  close(outfile);
+End.

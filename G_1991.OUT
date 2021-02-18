@@ -1,0 +1,43 @@
+L A
+A B
+ST $1
+L C
+A D
+ST $2
+L E
+A F
+A $2
+ST $2
+L G
+A H
+A $2
+A $1
+
+L A
+A B
+ST $1
+L C
+A D
+N
+A $1
+
+L A
+A B
+D C
+
+L A
+M B
+ST $1
+L C
+N
+A $1
+
+L A
+M B
+ST $1
+L C
+M D
+ST $2
+L $1
+D $2
+

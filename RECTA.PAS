@@ -1,0 +1,14 @@
+PROGRAM MINIMOS_CUADRO
+USES
+    CRT
+Procedure lectura(Var N:
+VAR
+  X,Y:REAL
+
+
+
+
+
+
+BEGIN
+    CRLSCR

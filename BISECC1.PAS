@@ -1,0 +1,41 @@
+{ ANALISIS NUMERICO
+  BURDEN-FAIRES      }
+PROGRAM BISECCION_01;
+USES CRT;
+
+CONST MAXITER=1000;
+
+VAR
+  A,B,TOL,Xraiz: REAL;
+
+FUNCTION F(Z: REAL): REAL;
+BEGIN
+  F:=(Z-3)*(Z-4)*(Z-6)*(Z-8);
+END;
+
+PROCEDURE LEE_DATOS(VAR Xinf,Xsup,Tol: REAL);
+BEGIN
+  WRITELN;
+  WRITE('Xinf= ');       READLN(Xinf);
+  WRITE('Xsup= ');       READLN(Xsup);
+  WRITE('tolerancia= '); READLN(Tol);
+  {---- tOL:= (B-A)/5000; ----}
+END;
+
+PROCEDURE BUSCA_RAIZ(A,B,TOL:real;VAR M: real);
+BEGIN
+   REPEAT
+     M:= (A+B)/2;
+     IF F(A)*F(M)>0 THEN
+       A:=M
+     ELSE
+       B:=M;
+   UNTIL (ABS(F(M))<=TOL) AND (B-A <= TOL);
+END;
+
+BEGIN
+  LEE_DATOS(A,B,TOL);
+  BUSCA_RAIZ(A,B,TOL,Xraiz);
+  WRITE('APROX. A LA RAIZ: ', Xraiz:0:12);
+  REPEAT UNTIL KEYPRESSED;
+END.
